@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    6) Find count of each character in the word
+    <script>
+        let a = "assurance";
+        let countMap = new Map();
+        for(let ch of a){
+            if(countMap.has(ch)){
+                var c = countMap.get(ch)
+                countMap.set(ch,c+1)
+            }
+            else{
+                countMap.set(ch,1);
+            }
+        }
+        for([key,values] of countMap.entries()){
+            console.log(key+"--->"+values);
+        }
+    </script>
+</body>
+</html>
